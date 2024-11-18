@@ -1,0 +1,822 @@
+{% load static %}
+
+<!--<!DOCTYPE html>-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>MercySolutions</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Green
+  * Template URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center accent-background">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">merwan@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+254 794 667 430</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="{% url 'employ:index' %}" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">MERWAN</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
+            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section accent-background">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="{% static 'img/hero-carousel/hero-carousel-1.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2>Unlock Data-Driven Insights</h2>
+            <p>Transform raw data into actionable insights. Discover how data analysis drives smarter decision-making and uncovers hidden trends for business growth and innovation.</p>
+            <a href="#featured-services" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{% static 'img/hero-carousel/hero-carousel-2.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2>Build Predictive Models</h2>
+            <p>Leverage the power of predictive analytics to forecast outcomes and make informed predictions. From market trends to healthcare, the possibilities are endless.</p>
+            <a href="#featured-services" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{% static 'img/hero-carousel/hero-carousel-3.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2>Analyze Data in Real-Time</h2>
+            <p>Stay ahead with real-time data analysis. Monitor key metrics, track performance, and respond to changes instantly to optimize operations and drive results.</p>
+            <a href="#featured-services" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section light-background">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-activity icon"></i></div>
+              <h4><a href="" class="stretched-link">Data Visualization</a></h4>
+              <p>Transform complex datasets into visually intuitive charts and graphs for better decision-making.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
+              <h4><a href="" class="stretched-link">Predictive Analytics</a></h4>
+              <p>Utilize historical data to forecast future trends and drive proactive strategies.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
+              <h4><a href="" class="stretched-link">Real-Time Monitoring</a></h4>
+              <p>Track key metrics in real-time to ensure optimal performance and quick adjustments.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
+              <h4><a href="" class="stretched-link">Big Data Analysis</a></h4>
+              <p>Process and analyze large-scale datasets to uncover valuable patterns and insights.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Services Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Us</h2>
+        <p>Empowering organizations with data-driven strategies and actionable insights.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'img/about.jpg' %}" class="img-fluid" alt="">
+
+          </div>
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>Driving Innovation Through Data Analysis</h3>
+            <p class="fst-italic">
+               Our expertise lies in leveraging data to uncover insights, streamline processes, and foster innovation across industries.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Comprehensive data cleaning, preparation, and analysis services.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Custom-tailored solutions to meet specific business needs.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Ethical and privacy-compliant practices in all data handling processes.</span></li>
+            </ul>
+            <p>
+              From startups to global enterprises, our solutions empower you to make confident decisions,
+              optimize operations, and stay ahead in a competitive world.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <div class="container">
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="100">
+            <span>01</span>
+            <h4>Expertise You Can Trust</h4>
+            <p>With years of experience in data analytics, we deliver insights that empower smarter decisions and drive success.</p>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="200">
+            <span>02</span>
+            <h4>Customized Solutions</h4>
+            <p>We tailor our analytics strategies to meet your unique needs, ensuring you achieve your business objectives efficiently.</p>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="300">
+            <span>03</span>
+            <h4> Cutting-Edge Technology</h4>
+            <p>Our solutions leverage the latest tools and technologies to provide you with accurate, actionable, and timely insights.</p>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="400">
+            <span>04</span>
+            <h4>Scalable Solutions</h4>
+            <p>Whether you're a startup or a large corporation, our solutions grow with your business, adapting to your changing needs.</p>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="400">
+            <span>05</span>
+            <h4>Data Privacy Guaranteed</h4>
+            <p>We adhere to strict ethical standards, ensuring that your data is handled securely and confidentially at all times.</p>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="600">
+            <span>06</span>
+            <h4>Insightful Reporting</h4>
+            <p>Our clear and detailed reports help you understand your data, enabling informed decision-making and strategic planning.</p>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-1.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-2.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-3.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-4.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-5.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-6.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-7.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'img/clients/client-8.png' %}" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Services</h2>
+        <p>Delivering cutting-edge solutions tailored to meet your data and technology needs.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-cyan position-relative">
+              <i class="bi bi-activity icon"></i>
+              <h3><a href="{% url 'employ:service' %}" class="read-more stretched-link">Business Intelligence</a></h3>
+              <p>Unlock valuable insights with advanced data analysis techniques, helping you make informed business decisions.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange position-relative">
+              <i class="bi bi-broadcast icon"></i>
+              <h3><a href="{% url 'employ:service' %}" class="read-more stretched-link">Predictive Modeling</a></h3>
+              <p>Leverage machine learning to anticipate trends, optimize processes, and stay ahead of the competition.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-teal position-relative">
+              <i class="bi bi-easel icon"></i>
+              <h3><a href="{% url 'employ:service' %}" class="read-more stretched-link">Data Visualization</a></h3>
+              <p>Present complex data in clear, interactive visualizations that simplify decision-making and enhance understanding.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item item-red position-relative">
+              <i class="bi bi-bounding-box-circles icon"></i>
+              <h3><a href="{% url 'employ:service' %}" class="read-more stretched-link">Consulting Services<</a></h3>
+              <p>Receive expert guidance on data strategy, system architecture, and implementation tailored to your goals.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item item-indigo position-relative">
+              <i class="bi bi-calendar4-week icon"></i>
+              <h3><a href="{% url 'employ:service' %}" class="read-more stretched-link">Cloud Integration.</a></h3>
+              <p>Streamline your data workflows with secure, scalable cloud-based solutions for storage and processing.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item item-pink position-relative">
+              <i class="bi bi-chat-square-text icon"></i>
+              <h3><a href="{% url 'employ:service' %}" class="read-more stretched-link">Data Analytics</a></h3>
+              <p>Unlock valuable insights with advanced data analysis techniques, helping you make informed business decisions.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section accent-background">
+
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-9 text-center text-xl-start">
+            <h3>Empower Your Data</h3>
+            <p>Transform raw information into actionable insights. From predictive analytics to real-time dashboards, let’s drive decisions and deliver impact together.</p>
+          </div>
+          <div class="col-xl-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Explore Our Services</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Data Analysis Portfolio</h2>
+        <p>Our projects showcase expertise across various data analysis domains, providing insights and solutions for diverse industries.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">Analytics</li>
+            <li data-filter=".filter-product">Modeling</li>
+            <li data-filter=".filter-branding">Visualization</li>
+            <li data-filter=".filter-books">Machine Learning</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <a href="{% static 'img/portfolio/app-1.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{%static 'img/portfolio/app-1.jpg' %}" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="{% url 'employ:portfolio' %}" title="More Details">Sales Data Analysis</a></h4>
+                  <p>Analyzed sales data to reveal seasonal trends and customer insights, driving strategic business decisions.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <a href="assets/img/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{%static 'img/portfolio/product-1.jpg' %}" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="{% url 'employ:portfolio' %}" title="More Details">Interactive Dashboards</a></h4>
+                  <p>>Created dynamic dashboards using Power BI and Tableau, visualizing KPIs for enhanced decision-making.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <a href="{% static 'img/portfolio/branding-1.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{%static 'img/portfolio/branding-1.jpg' %}" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="{% url 'employ:portfolio' %}" title="More Details">Predictive Modeling</a></h4>
+                  <p>Developed machine learning models to predict customer churn, improving retention strategies by 30%.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <a href="{% static 'img/portfolio/books-1.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{%static 'img/portfolio/books-1.jpg' %}" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="{% url 'employ:portfolio' %}" title="More Details">Customer Segmentation</a></h4>
+                  <p>Applied clustering techniques to segment customers based on purchasing behavior and demographics.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <a href="{% static 'img/portfolio/app-2.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{%static 'img/portfolio/app-2.jpg' %}" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="{% url 'employ:portfolio' %}" title="More Details">Revenue Forecasting</a></h4>
+                  <p>Developed a revenue forecasting model using time series analysis to predict future sales trends.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <a href="{% static 'img/portfolio/product-2.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{%static 'img/portfolio/product-2.jpg' %}" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="{% url 'employ:portfolio' %}" title="More Details">Customer Lifetime Value Prediction</a></h4>
+                  <p>Developed predictive models to estimate customer lifetime value and optimize marketing efforts.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <a href="{% static 'img/portfolio/branding-2.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{%static 'img/portfolio/branding-2.jpg' %}" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="{% url 'employ:portfolio' %}" title="More Details">Environmental Impact Visualization</a></h4>
+                  <p>Created detailed visualizations to analyze and present the environmental impact of various industries using large-scale environmental data sets.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <a href="{% static 'img/portfolio/books-2.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{%static 'img/portfolio/books-2.jpg' %}" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="{% url 'employ:portfolio' %}" title="More Details">Economic Impact Analysis</a></h4>
+                  <p>Conducted an economic impact analysis to assess the effects of policy changes on local economies.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <a href="{% static 'img/portfolio/app-3.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{%static 'img/portfolio/app-3.jpg' %}" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="{% url 'employ:portfolio' %}" title="More Details">Sentiment Analysis</a></h4>
+                  <p>Developed sentiment analysis models using NLP to assess customer feedback and social media posts.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <a href="{% static 'img/portfolio/product-3.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{%static 'img/portfolio/product-3.jpg' %}" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="{% url 'employ:portfolio' %}" title="More Details">Market Basket Analysis</a></h4>
+                  <p>Used association rule mining to identify frequently bought items, improving product placement and promotions.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <a href="{%static 'img/portfolio/branding-3.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{%static 'img/portfolio/branding-3.jpg' %}" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="{% url 'employ:portfolio' %}" title="More Details">Geospatial Data Mapping</a></h4>
+                  <p>Mapped geospatial data to visualize patterns in environmental and demographic changes over time./p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <a href="{% static 'img/portfolio/books-3.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{%static 'img/portfolio/books-3.jpg' %}" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="{% url 'employ:portfolio' %}" title="More Details">AI-based Fraud Detection</a></h4>
+                  <p>Implemented a machine learning model to detect fraudulent transactions with high accuracy.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Meet the Team</h2>
+        <p>Our data experts, analysts, and developers combine their knowledge to deliver results-driven solutions in data analysis.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="{% static 'img/team/team-1.jpg' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Stanley Karanja</h4>
+                <span>Data Analyst</span>
+                <p>
+                  Specializes in transforming complex datasets into actionable business insights.
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="{% static 'img/team/team-2.jpg' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Sarah Williams</h4>
+                <span>Machine Learning Engineer</span>
+                <p>
+                  Expert in building scalable machine learning models and deploying AI solutions.
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="{% static 'img/team/team-3.jpg' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Michael Brown</h4>
+                <span>Data Scientist</span>
+                <p>
+                  Leads advanced analytics projects to uncover trends and insights for strategic growth.
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>If you're looking to leverage data to make informed decisions or need assistance with your data analysis projects, feel free to reach out. We provide tailored solutions to help you unlock the power of data.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>P.O.Box 60200 Meru</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+254 794 667 430</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>merwan@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+<!--              <iframe src="https://www.google.com/search?q=my+location&oq=my+location&gs_lcrp=EgZjaHJvbWUqEggAEAAYQxixAxjJAxiABBiKBTISCAAQABhDGLEDGMkDGIAEGIoFMg0IARAAGJIDGIAEGIoFMgcIAhAAGIAEMgcIAxAAGIAEMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMg0ICBAuGK8BGMcBGIAEMgcICRAAGIAE0gEIMjcyNWowajeoAgiwAgE&sourceid=chrome&ie=UTF-8"></iframe>-->
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="{% url 'employ:contact' %}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+               {% csrf_token %}
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="{% url 'employ:index' %}" class="logo d-flex align-items-center">
+            <span class="sitename">Merwan Data Solutions</span>
+          </a>
+          <p>We leverage data to provide insightful solutions that drive smarter decision-making. Our expertise spans data cleaning, predictive modeling, statistical analysis, and machine learning to uncover patterns and deliver impactful results.</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+       <div class="col-lg-2 col-6 footer-links">
+    <h4>Our Data Analysis Services</h4>
+    <ul>
+      <li><a href="#">Data Cleaning & Preprocessing</a></li>
+      <li><a href="#">Predictive Modeling</a></li>
+      <li><a href="#">Data Visualization</a></li>
+      <li><a href="#">Statistical Analysis</a></li>
+      <li><a href="#">Machine Learning Implementation</a></li>
+    </ul>
+  </div>
+
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>P.O.BOX 60200</p>
+          <p>Meru</p>
+          <p>Kenya</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+254 794 667 430</span></p>
+          <p><strong>Email:</strong> <span>merwan@example.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Merwan</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
