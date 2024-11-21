@@ -1,9 +1,27 @@
 from django.shortcuts import render, redirect
-from .models import Contact
+from . models import Contact, Service, Slider, Featured
+
+from . serializers import ContactSerializer
+from rest_framework import viewsets
 
 # Create your views here.
+
+class ContactView(viewsets.ModelViewSet):
+    queryset = Contact.objects.all()
+    serializer_class =  ContactSerializer
+
+
+
 def home(request):
-    return render(request,'index.html')
+    sliders = Slider.objects.all()
+    service = Service.objects.first()
+    featured = Featured.objects.all()
+    context = {
+        'sliders': sliders,
+        'service': service,
+        'feature': featured
+    }
+    return render(request,'index.html',context)
 
 
 def portfolio(request):
